@@ -5,7 +5,7 @@ import Layout from './Layout';
 
 function App() {
   return (
-    <Box width="100vw" border="2px solid black" overflowX="hidden" fontFamily="Roboto, sans-serif">
+    <Box border="2px solid black" overflowX="hidden" fontFamily="Roboto, sans-serif">
       <Routes>
         <Route path='/' element = {<Layout/>} >
           <Route index element = {<Home />} />

@@ -4,9 +4,8 @@ import logo from '../assets/logo.png';
 
 const Footer = () => {
   const textColor = useColorModeValue('gray.500', 'gray.400');
-
   return (
-    <Box as="footer" bg="#191b20" borderRadius="lg" py={6}>
+    <Box as="footer" bg="#191b20"  py={6}>
       <Container maxW="7xl" px={4}>
         <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" alignItems="center">
           <Box mb={{ base: 6, md: 0 }} >
