@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react"
 import HeroSection from '../components/Hero';
-import TradingTools from '../components/TradingTools';
 import AccountTypes from '../components/AccountTypes';
 import CreateAccount from '../components/CreateAccount';
 import CustomerReviews from '../components/CustomerReviews';
 import Features from "../components/Features";
 import AboutUs from "../components/AboutUs";
+import StartStep from "../components/StartStep";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <HeroSection />
         <Features />
         <AboutUs />
-        <TradingTools />
+        <StartStep />
         <AccountTypes />
         <CreateAccount />
         <CustomerReviews />

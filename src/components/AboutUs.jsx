@@ -1,10 +1,10 @@
-import { Box, Grid, Heading, Text, VStack, Image, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Grid, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
 import aboutUsImage from '../assets/charts_2.jpg'; // Adjust the import path according to your project structure
 
 const AboutUs = () => {
-  const showImage = useBreakpointValue({ base: false, lg: true });
+//   const showImage = useBreakpointValue({ base: false, lg: true });
 
   const contentVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -19,9 +19,8 @@ const AboutUs = () => {
   return (
     <Box id='about-us' color="white" py={20} px={10} bg="#191b20">
       <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10} alignItems={"center"}>
-        {showImage && (
           <motion.div initial="hidden" whileInView="visible" variants={imageVariants} viewport={{ once: true }}>
-            <Box position="sticky" top="0" width="100%" >
+            <Box position="sticky" top="0" width="100%" height={{ base: "300px", lg: "auto" }} >
               <Image
                 loading='lazy'
                 src={aboutUsImage}
@@ -33,7 +32,6 @@ const AboutUs = () => {
               />
             </Box>
           </motion.div>
-        )}
         <motion.div initial="hidden" whileInView="visible" variants={contentVariants} viewport={{ once: true }}>
           <VStack spacing={6} align="flex-start">
             <Heading as="h2" size="xl" mb={4} textTransform={"capitalize"}>

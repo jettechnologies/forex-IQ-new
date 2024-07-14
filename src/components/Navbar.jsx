@@ -143,7 +143,7 @@ const Navbar = () => {
             <Link href="/#about-us" display="block" py={2}>About Us</Link>
             <Link href="/#features" display="block" py={2}>Features</Link>
             <Link href="/#contact-us" display="block" py={2}>Contact Us</Link>
-            <Flex gap={"2rem"}>
+            <Flex mt = {10} columnGap={"2rem"} rowGap={4} flexDirection={{base: "column", md: "row"}}>
             <Button
                 variant="outline"
                 border="1px solid"
@@ -152,16 +152,14 @@ const Navbar = () => {
                 mr={4}
                 bg="transparent"
                 animation={`${glow} 2s infinite`}
-                width={buttonWidth}
-                my={2}
+                width= {{base: "100%", md: "calc(50% - 2rem)"}}
               >
                 Login
               </Button>
               <Button
                 bg="#011b3d"
                 color="white"
-                width={buttonWidth}
-                my={2}
+                width={{base: "100%", md: "calc(50% - 2rem)"}}
                 _hover={{ bg: "#011b3d" }}
               >
                 Sign Up

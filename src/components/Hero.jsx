@@ -35,13 +35,13 @@
 //     duration: 1000,
 //     slidesPerView: 5,
 //     breakpoints: {
-//       '(max-width: 767px)': {
+//       320: {
 //         slidesPerView: 1,
 //       },
-//       '(min-width: 768px) and (max-width: 1023px)': {
+//       768: {
 //         slidesPerView: 3,
 //       },
-//       '(min-width: 1024px)': {
+//       1024: {
 //         slidesPerView: 5,
 //       },
 //     },
@@ -162,7 +162,7 @@ import { useEffect, useRef } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { motion } from 'framer-motion';
-import heroImg from "../assets/charts.jpg";
+import heroImg from '../assets/charts.jpg';
 
 const HeroSection = () => {
   const typing = keyframes`
@@ -177,33 +177,33 @@ const HeroSection = () => {
   `;
 
   const tickerItems = [
-    "BTC/USD $985.76 (+0.86%)",
-    "ETH/USD $1500.43 (-1.23%)",
-    "XRP/USD $0.25 (+2.34%)",
-    "LTC/USD $150.56 (-0.56%)",
-    "BCH/USD $305.76 (+1.12%)",
-    "ADA/USD $1.23 (+0.45%)",
-    "DOGE/USD $0.07 (-2.45%)",
-    "DOT/USD $20.45 (+1.56%)",
-    "UNI/USD $25.78 (-0.89%)",
-    "LINK/USD $30.12 (+0.99%)"
+    'BTC/USD $985.76 (+0.86%)',
+    'ETH/USD $1500.43 (-1.23%)',
+    'XRP/USD $0.25 (+2.34%)',
+    'LTC/USD $150.56 (-0.56%)',
+    'BCH/USD $305.76 (+1.12%)',
+    'ADA/USD $1.23 (+0.45%)',
+    'DOGE/USD $0.07 (-2.45%)',
+    'DOT/USD $20.45 (+1.56%)',
+    'UNI/USD $25.78 (-0.89%)',
+    'LINK/USD $30.12 (+0.99%)'
   ];
 
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 1000,
-    slidesPerView: 5,
     breakpoints: {
-      320: {
+      '(max-width: 320px)': {
         slidesPerView: 1,
       },
-      768: {
+      '(max-width: 768px)': {
         slidesPerView: 3,
       },
-      1024: {
+      '(min-width: 1024px)': {
         slidesPerView: 5,
       },
     },
+    slidesPerView: 5,
     created: (s) => {
       s.moveToIdx(1, true, { duration: 2000 });
     },
@@ -231,7 +231,7 @@ const HeroSection = () => {
         bgSize="cover"
         color="white"
         py={20}
-        height={{ base: "100vh", lg: "calc(100vh - 4rem)" }}
+        height={{ base: '100vh', lg: 'calc(100vh - 4rem)' }}
       >
         {/* Overlay */}
         <Box
@@ -258,22 +258,24 @@ const HeroSection = () => {
           px={{ base: 4, md: 16 }}
         >
           <Box my="4rem" width="fit-content" mb={{ base: 8, md: 0 }}>
-            <Heading as="h1" size="2xl" mb={4}>Unleash the power of AI Trading</Heading>
+            <Heading as="h1" size="2xl" mb={4}>
+              Unleash the power of AI Trading
+            </Heading>
             <Text
-              fontSize={{ base: "md", md: "lg", lg: "xl" }}
+              fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
               mb={10}
               borderRight="0.15em solid white"
               animation={`${typing} 3.5s steps(40, end) 1s, ${blink} 0.75s step-end infinite`}
             >
-              THE FOREX IQ- YOUR TRUSTED PARTNER IN AUTOMATED TRADING
+              THE FOREX IQ - YOUR TRUSTED PARTNER IN AUTOMATED TRADING
             </Text>
             <Button
-              px={{ md: "4rem" }}
+              px={{ md: '4rem' }}
               bg="#011b3d"
               color="white"
-              _hover={{ bg: "#00284d" }}
+              _hover={{ bg: '#00284d' }}
               size="lg"
-              width={{ base: "100%", md: "auto" }}
+              width={{ base: '100%', md: 'auto' }}
               rounded="md"
             >
               Start Trading Now
@@ -283,26 +285,37 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-end',
+              height: '100%',
+            }}
           >
             {/* Optional Image or any other component you want to place here */}
           </motion.div>
         </Flex>
-        <Box 
-          px={4} 
-          py={2} 
-          bg="#0e1113" 
+        <Box
+          px={4}
+          py={2}
+          bg="#0e1113"
           opacity={0.7}
-          width="100vw" 
-          display="flex" 
-          justifyContent="center" 
-          position="absolute" 
+          width="100vw"
+          display="flex"
+          justifyContent="center"
+          position="absolute"
           bottom="0"
           zIndex={2}
         >
           <Box maxWidth="90vw" ref={sliderRef} className="keen-slider">
             {tickerItems.map((item, index) => (
-              <Box key={index} className="keen-slider__slide" px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
+              <Box
+                key={index}
+                className="keen-slider__slide"
+                px={4}
+                display="inline-block"
+                color={item.includes('+') ? 'green.400' : 'red.400'}
+              >
                 {item}
               </Box>
             ))}
@@ -311,6 +324,6 @@ const HeroSection = () => {
       </Box>
     </>
   );
-}
+};
 
 export default HeroSection;
