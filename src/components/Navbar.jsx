@@ -85,8 +85,8 @@ const Navbar = () => {
       >
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
           <Box display={"flex"} alignItems={"center"}>
-            <Image src={Logo} alt="Logo" height="4rem" border={"2px solid red"}/>
-            <Text fontSize="2xl" fontWeight="bold">ForexIQ</Text>
+            <Image src={Logo} alt="Logo" height="4rem" loading='lazy'/>
+            <Text display={{base: "none", md: "inline-block"}} fontSize="2xl" fontWeight="bold">TheforexIQ</Text>
           </Box>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap={"2rem"} justifyContent="space-between" width="65vw">
             <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} flex={1} px={2} py={2}>
