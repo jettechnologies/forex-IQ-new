@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { motion } from 'framer-motion';
-import heroImg from "../assets/charts.jpg";
+import heroImg from "../assets/hero_img_2.jpg";
 
 const HeroSection = () => {
   const typing = keyframes`
