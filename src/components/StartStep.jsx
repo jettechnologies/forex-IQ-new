@@ -2,12 +2,16 @@
 import { Box, Flex, Text, Image, Grid, Heading } from '@chakra-ui/react';
 import { motion, useInView } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
+import form from  "../assets/form.png";
+import purchase from "../assets/purchase.png";
+import connect from "../assets/connect.png";
+import activate from "../assets/activation.png";
 
 const steps = [
-  { text: 'Signup', image: 'https://via.placeholder.com/300x500' },
-  { text: 'Purchase a bot', image: 'https://via.placeholder.com/300x500' },
-  { text: 'Connect your trading account or coin', image: 'https://via.placeholder.com/300x500' },
-  { text: 'Activate the bot', image: 'https://via.placeholder.com/300x500' },
+  { text: 'Signup', image: form },
+  { text: 'Purchase a bot', image: purchase },
+  { text: 'Connect your trading account or coin', image: connect },
+  { text: 'Activate the bot', image: activate },
 ];
 
 const StartStep = () => {
