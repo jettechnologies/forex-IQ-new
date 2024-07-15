@@ -122,7 +122,9 @@ const Navbar = () => {
           </Flex>
           <IconButton
             aria-label="Toggle Menu"
-            backgroundColor = 'transparent'
+            backgroundColor = '#0e1113'
+            _focus={{ outline: "none", backgroundColor: 'transparent' }}
+            color = "#f4f4f4"
             icon={isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             display={{ base: "flex", lg: "none" }}
             onClick={toggleMobileMenu}
