@@ -5,7 +5,7 @@ import banner from "../assets/charts_2.jpg";
 
 
 const Refund = () => (
-  <Box>
+  <Box backgroundColor = '#0e1113'>
     <Banner title="Refund Policy" subtitle="Refund policy page" banner = {banner}/>
     <Box p={4}>
       <Text fontSize="lg" lineHeight="1.5em">
