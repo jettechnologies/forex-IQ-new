@@ -11,16 +11,16 @@ import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <Box overflowX="hidden" fontFamily="Rajdhani, sans-serif">
-      <Routes>
-        <Route path='/' element = {<Layout/>} >
-          <Route index element = {<Home />} />
-          <Route path = "/about-us" element = {<AboutUs/>} />
-          <Route path = "/contact-us" element = {<ContactUs/>} />
-          <Route path="/privacy-policy" element={<Privacy />} />
-          <Route path="/terms-and-condition" element={<Terms />} />
-          <Route path="/refund-policy" element={<Refund />} />
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path='/' element = {<Layout/>} >
+            <Route index element = {<Home />} />
+            <Route path = "/about-us" element = {<AboutUs/>} />
+            <Route path = "/contact-us" element = {<ContactUs/>} />
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/terms-and-condition" element={<Terms />} />
+            <Route path="/refund-policy" element={<Refund />} />
+          </Route>
+        </Routes>
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Flex, Button, Link, IconButton, useBreakpointValue, keyframes, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Button, Link, IconButton, useBreakpointValue, keyframes, Image, Text, Heading } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { motion, useAnimation } from 'framer-motion';
 import Logo from "../assets/logo.png";
@@ -86,14 +86,14 @@ const Navbar = () => {
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
           <Link href = "/" display={"flex"} alignItems={"center"}>
             <Image src={Logo} alt="Logo" height="4rem" loading='lazy'/>
-            <Text display={{base: "none", md: "inline-block"}} fontSize="2xl" fontWeight="bold">TheforexIQ</Text>
+            <Heading display={{base: "none", md: "inline-block"}} fontSize="2xl">TheforexIQ</Heading>
           </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap={"2rem"} justifyContent="space-between" width="65vw">
             <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} justifyContent={"space-around"} rounded = "lg" flex={1} px={2} py={2} border = "1px solid #c0c0c0">
-              <Link href="/" px={2} py={2} mr={4}>Home</Link>
-              <Link href="/about-us" px={2} py={2} mr={4}>About Us</Link>
+              <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
+              <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
               {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-              <Link href="/contact-us" px={2} py={2}>Contact Us</Link>
+              <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
             </Box>
             <Box>
               <Button
@@ -107,7 +107,7 @@ const Navbar = () => {
                 width={buttonWidth}
                 my={2}
               >
-                Login
+                <Text fontSize={"md"}>Login</Text>
               </Button>
               <Button
                 bg="#011b3d"
@@ -116,7 +116,7 @@ const Navbar = () => {
                 my={2}
                 _hover={{ bg: "#011b3d" }}
               >
-                Sign Up
+                <Text fontSize={"md"}>Sign Up</Text>
               </Button>
             </Box>
           </Flex>
@@ -140,10 +140,10 @@ const Navbar = () => {
             left="0"
             border = "1px solid gray.800"
           >
-            <Link href="/" display="block" py={2}>Home</Link>
-            <Link href="/about-us" display="block" py={2}>About Us</Link>
-            {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-            <Link href="/contact-us" display="block" py={2}>Contact Us</Link>
+            <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
+            <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
+              {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
+            <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
             <Flex mt = {10} columnGap={"2rem"} rowGap={4} flexDirection={{base: "column", md: "row"}}>
             <Button
                 variant="outline"
@@ -155,7 +155,7 @@ const Navbar = () => {
                 animation={`${glow} 2s infinite`}
                 width= {{base: "100%", md: "calc(50% - 2rem)"}}
               >
-                Login
+                <Text fontSize={"md"}>Login</Text>
               </Button>
               <Button
                 bg="#011b3d"
@@ -163,7 +163,7 @@ const Navbar = () => {
                 width={{base: "100%", md: "calc(50% - 2rem)"}}
                 _hover={{ bg: "#011b3d" }}
               >
-                Sign Up
+                <Text fontSize={"md"}>Sign Up</Text>
               </Button>
             </Flex>
           </Box>
@@ -194,10 +194,10 @@ const Navbar = () => {
               </Link>
               <Flex display={{ base: "none", lg: "block" }}>
                 <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} flex={1} px={2} py={2}>
-                  <Link href="/" px={2} py={2} mr={4}>Home</Link>
-                  <Link href="/about-us" px={2} py={2} mr={4}>About Us</Link>
-                  {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-                  <Link href="/contact-us" px={2} py={2}>Contact Us</Link>
+                <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
+                <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
+                {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
+                <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
                 </Box>
               </Flex>
               <Button
@@ -207,7 +207,7 @@ const Navbar = () => {
                 my={2}
                 _hover={{ bg: "#011b3d" }}
               >
-                Sign Up
+                <Text fontSize={"md"}>Sign Up</Text>
               </Button>
             </Flex>
           </Box>

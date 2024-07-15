@@ -117,7 +117,7 @@ const HeroSection = () => {
               width={{ base: "100%", md: "auto" }}
               rounded="md"
             >
-              Start Trading Now
+              <Text variants = "subheading" fontSize={{base:"md", xl: "xl"}}>Start Trading Now</Text>
             </Button>
           </Box>
           <motion.div
@@ -144,7 +144,7 @@ const HeroSection = () => {
           <Box maxWidth="90vw" ref={sliderRef} className="keen-slider">
             {tickerItems.map((item, index) => (
               <Box key={index} className="keen-slider__slide" px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
-                {item}
+                <Text fontSize="md">{item}</Text>
               </Box>
             ))}
           </Box>
