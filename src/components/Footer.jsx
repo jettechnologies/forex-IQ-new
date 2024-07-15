@@ -9,7 +9,7 @@ const Footer = () => {
       <Container maxW="7xl" px={4}>
         <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" alignItems="center">
           <Box mb={{ base: 6, md: 0 }} >
-            <Link>
+            <Link href = "/">
               <HStack spacing={3} alignItems="center">
                 <Image src={logo} h="4rem" alt="ForexIQ Logo"/>
                 <Heading size="lg" fontWeight="bold" color="white">
@@ -27,10 +27,10 @@ const Footer = () => {
                 <Link href="/" _hover={{ textDecoration: 'underline' }}>
                   Home
                 </Link>
-                <Link href="/#about-us" _hover={{ textDecoration: 'underline' }}>
+                <Link href="/about-us" _hover={{ textDecoration: 'underline' }}>
                   About Us
                 </Link>
-                <Link href="/#contact-us" _hover={{ textDecoration: 'underline' }}>
+                <Link href="/contact-us" _hover={{ textDecoration: 'underline' }}>
                   Contact Us
                 </Link>
               </Stack>

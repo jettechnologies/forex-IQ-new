@@ -51,7 +51,7 @@ const Navbar = () => {
         position: 'fixed',
         top: 0,
         left: '50%',
-        transform: 'translateX(-50%)',
+        transform: 'translateX(-40%)',
         width: '60%',
         zIndex: 100,
         transition: { duration: 0.3 },
@@ -84,16 +84,16 @@ const Navbar = () => {
         zIndex={10}
       >
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
-          <Box display={"flex"} alignItems={"center"}>
+          <Link href = "/" display={"flex"} alignItems={"center"}>
             <Image src={Logo} alt="Logo" height="4rem" loading='lazy'/>
             <Text display={{base: "none", md: "inline-block"}} fontSize="2xl" fontWeight="bold">TheforexIQ</Text>
-          </Box>
+          </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap={"2rem"} justifyContent="space-between" width="65vw">
             <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} justifyContent={"space-around"} rounded = "lg" flex={1} px={2} py={2} border = "1px solid #c0c0c0">
               <Link href="/" px={2} py={2} mr={4}>Home</Link>
-              <Link href="/#about-us" px={2} py={2} mr={4}>About Us</Link>
-              <Link href="/#features" display="block" py={2}>Features</Link>
-              <Link href="/#contact-us" px={2} py={2}>Contact Us</Link>
+              <Link href="/about-us" px={2} py={2} mr={4}>About Us</Link>
+              {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
+              <Link href="/contact-us" px={2} py={2}>Contact Us</Link>
             </Box>
             <Box>
               <Button
@@ -141,9 +141,9 @@ const Navbar = () => {
             border = "1px solid gray.800"
           >
             <Link href="/" display="block" py={2}>Home</Link>
-            <Link href="/#about-us" display="block" py={2}>About Us</Link>
-            <Link href="/#features" display="block" py={2}>Features</Link>
-            <Link href="/#contact-us" display="block" py={2}>Contact Us</Link>
+            <Link href="/about-us" display="block" py={2}>About Us</Link>
+            {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
+            <Link href="/contact-us" display="block" py={2}>Contact Us</Link>
             <Flex mt = {10} columnGap={"2rem"} rowGap={4} flexDirection={{base: "column", md: "row"}}>
             <Button
                 variant="outline"
@@ -189,15 +189,15 @@ const Navbar = () => {
             border = "1px solid #c0c0c0"
           >
             <Flex h="100%" alignItems="center" justifyContent="space-between" gap={10} py={4}>
-              <Box display={"flex"} alignItems={"center"}>
+              <Link href =  "/" display={"flex"} alignItems={"center"}>
                 <Image src={Logo} alt="Logo" height="4rem" />
-              </Box>
+              </Link>
               <Flex display={{ base: "none", lg: "block" }}>
                 <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} flex={1} px={2} py={2}>
                   <Link href="/" px={2} py={2} mr={4}>Home</Link>
-                  <Link href="/#about-us" px={2} py={2} mr={4}>About Us</Link>
-                  <Link href="/#features" display="block" py={2}>Features</Link>
-                  <Link href="/#contact-us" px={2} py={2}>Contact Us</Link>
+                  <Link href="/about-us" px={2} py={2} mr={4}>About Us</Link>
+                  {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
+                  <Link href="/contact-us" px={2} py={2}>Contact Us</Link>
                 </Box>
               </Flex>
               <Button
