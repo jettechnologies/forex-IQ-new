@@ -59,7 +59,7 @@ import {
     };
   
     return (
-      <Box id="contact-us" bg="#011b3d" py={{ base: 8, lg: 16 }} px={4} minHeight="100vh">
+      <Box id="contact-us" bg="#191b20" py={{ base: 20, lg: 16 }} px={4} minHeight="100vh">
         <Container maxW="screen.md" mx="auto">
           <Heading
             as="h2"
@@ -84,10 +84,11 @@ import {
           <Flex direction="column" gap={8}>
             <Flex justifyContent="space-between" direction={{ base: 'column', lg: 'row' }} gap={4}>
               <Box
-                bg="#1911b20"
+                bg="#0e1113"
                 px={8}
-                py={3}
+                py={6}
                 rounded="md"
+                shadow={"md"}
                 display="flex"
                 alignItems="center"
                 color="white"
@@ -96,10 +97,11 @@ import {
                 <Text ml={2}>1234 Street Name, City, Country</Text>
               </Box>
               <Box
-                bg="#1911b20"
+                bg="#0e1113"
                 px={8}
-                py={3}
+                py={6}
                 rounded="md"
+                shadow={"md"}
                 display="flex"
                 alignItems="center"
                 color="white"
@@ -108,10 +110,11 @@ import {
                 <Text ml={2}>+123 456 7890</Text>
               </Box>
               <Box
-                bg="#1911b20"
+                bg="#0e1113"
                 px={8}
-                py={3}
+                py={6}
                 rounded="md"
+                shadow={"md"}
                 display="flex"
                 alignItems="center"
                 color="white"
@@ -120,8 +123,8 @@ import {
                 <Text ml={2}>info@example.com</Text>
               </Box>
             </Flex>
-            <Flex direction={{ base: 'column', lg: 'row' }} gap={8}>
-              <Box flex={1}>
+            <Flex mt = {8} direction={{ base: 'column', lg: 'row' }} justify={"center"} gap={8}>
+              <Box width = {{lg: "60%"}}>
                 <form onSubmit={handleFormSubmit}>
                   <Stack spacing={4}>
                     <FormControl>
@@ -230,7 +233,7 @@ import {
                   </Stack>
                 </form>
               </Box>
-              <Box flex={1}>
+              {/* <Box flex={1}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.8397886044!2d77.06889969550207!3d28.527582105455467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a52866b891%3A0x6f19f2a760ca234e!2sDelhi%2C%20India!5e0!3m2!1sen!2sus!4v1625834496391!5m2!1sen!2sus"
                   width="100%"
@@ -239,7 +242,7 @@ import {
                   allowFullScreen=""
                   loading="lazy"
                 ></iframe>
-              </Box>
+              </Box> */}
             </Flex>
           </Flex>
         </Container>

@@ -131,14 +131,13 @@ const Navbar = () => {
           <Box
             width="100%"
             display={{ base: "block", lg: "none" }}
-            bg="black"
+            bg="#1c1d20"
             zIndex={999}
             color="#f4f4f4"
             p={4}
             position="absolute"
             top="4rem"
             left="0"
-            border = "1px solid gray.800"
           >
             <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
             <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>

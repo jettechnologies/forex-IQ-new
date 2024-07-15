@@ -1,7 +1,7 @@
 // /* eslint-disable react/prop-types */
-// import { Box, Flex, Text, Grid, Heading, Image } from '@chakra-ui/react';
+// import { Box, Flex, Text, Grid, Heading, Image, useBreakpointValue } from '@chakra-ui/react';
 // import { motion } from 'framer-motion';
-// import { useState } from 'react';
+// import { useState, useEffect } from 'react';
 // import form from "../assets/form.png";
 // import purchase from "../assets/purchase.png";
 // import connect from "../assets/connect.png";
@@ -15,7 +15,17 @@
 // ];
 
 // const StartStep = () => {
-//   const [activeStep, setActiveStep] = useState(null);
+//   const [activeStep, setActiveStep] = useState(0);
+
+//   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveStep((prevStep) => (prevStep + 1) % steps.length);
+//     }, 3500);
+
+//     return () => clearInterval(interval);
+//   }, []);
 
 //   return (
 //     <Box minHeight="100vh" backgroundColor="#0e1113" py={10} px={{ base: 4, md: 10 }} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
@@ -36,7 +46,7 @@
 //               direction="column"
 //               p={6}
 //               borderRadius="md"
-//               backgroundColor={activeStep === index ? '#191b20' : '#0e1113'}
+//               backgroundColor={activeStep === index ? '#46484b' : '#191b20'}
 //               onMouseEnter={() => setActiveStep(index)}
 //               onMouseLeave={() => setActiveStep(null)}
 //               transition="background-color 0.3s"
@@ -59,25 +69,27 @@
 //             </Flex>
 //           ))}
 //         </Grid>
-//         <Box mt={10} width={{ base: '100%', md: '80%', lg: '60%' }} height={{ base: '200px', md: '300px', lg: '400px' }} position="relative">
-//           {steps.map((step, index) => (
-//             <motion.div
-//               key={index}
-//               initial={{ opacity: 0 }}
-//               animate={{ opacity: activeStep === index ? 1 : 0 }}
-//               transition={{ duration: 0.5 }}
-//               style={{
-//                 position: activeStep === index ? 'relative' : 'absolute',
-//                 top: 0,
-//                 left: 0,
-//                 width: '100%',
-//                 height: '100%'
-//               }}
-//             >
-//               <Image src={step.image} alt={step.text} width="100%" height="100%" objectFit="cover" />
-//             </motion.div>
-//           ))}
-//         </Box>
+//         {isLargeScreen && (
+//           <Box mt={10} width={{ base: '100%', md: '80%', lg: '60%' }} height={{ base: '200px', md: '300px', lg: '400px' }} position="relative">
+//             {steps.map((step, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0 }}
+//                 animate={{ opacity: activeStep === index ? 1 : 0 }}
+//                 transition={{ duration: 0.5 }}
+//                 style={{
+//                   position: activeStep === index ? 'relative' : 'absolute',
+//                   top: 0,
+//                   left: 0,
+//                   width: '100%',
+//                   height: '100%'
+//                 }}
+//               >
+//                 <Image src={step.image} alt={step.text} width="100%" height="100%" objectFit="cover" />
+//               </motion.div>
+//             ))}
+//           </Box>
+//         )}
 //       </Flex>
 //     </Box>
 //   );
@@ -87,25 +99,24 @@
 
 
 /* eslint-disable react/prop-types */
-/* eslint-disable react/prop-types */
 import { Box, Flex, Text, Grid, Heading, Image, useBreakpointValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { FaRegFileAlt, FaWallet, FaPlug, FaPowerOff } from 'react-icons/fa';
 import form from "../assets/form.png";
 import purchase from "../assets/purchase.png";
 import connect from "../assets/connect.png";
 import activate from "../assets/activation.png";
 
 const steps = [
-  { text: 'Signup', description: 'Sign up to create your account', image: form },
-  { text: 'Purchase a bot', description: 'Buy a trading bot', image: purchase },
-  { text: 'Connect your trading account or coin', description: 'Link your trading account or cryptocurrency', image: connect },
-  { text: 'Activate the bot', description: 'Turn on the bot and start trading', image: activate },
+  { text: 'Signup', description: 'Sign up to create your account', image: form, icon: <FaRegFileAlt /> },
+  { text: 'Purchase a bot', description: 'Buy a trading bot', image: purchase, icon: <FaWallet /> },
+  { text: 'Connect your trading account or coin', description: 'Link your trading account or cryptocurrency', image: connect, icon: <FaPlug /> },
+  { text: 'Activate the bot', description: 'Turn on the bot and start trading', image: activate, icon: <FaPowerOff /> },
 ];
 
 const StartStep = () => {
   const [activeStep, setActiveStep] = useState(0);
-
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
 
   useEffect(() => {
@@ -140,7 +151,12 @@ const StartStep = () => {
               onMouseLeave={() => setActiveStep(null)}
               transition="background-color 0.3s"
               cursor="pointer"
+              alignItems="center"
+              textAlign="center"
             >
+              <Box mb={4} color={activeStep === index ? '#010392' : '#010494'} fontSize="2xl">
+                {step.icon}
+              </Box>
               <Text
                 fontSize={{ base: 'xl', md: '2xl' }}
                 color="#fff"
@@ -174,7 +190,7 @@ const StartStep = () => {
                   height: '100%'
                 }}
               >
-                <Image src={step.image} alt={step.text} width="100%" height="100%" objectFit="cover" />
+                <Image src={step.image} alt={step.text} width="100%" height="100%" objectFit="contain" />
               </motion.div>
             ))}
           </Box>
