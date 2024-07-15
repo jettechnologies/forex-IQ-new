@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import banner from "../assets/charts_3.jpg";
 
 const Terms = () => (
-  <Box backgroundColor = '#0e1113' color = '#f4f4f4'>
+  <Box backgroundColor = '#191b20' color = '#f4f4f4'>
     <Banner title="Terms and Conditions" subtitle="Terms and conditions" banner={banner}/>
     <Box p={4}>
       <Text fontSize="lg" lineHeight={1.5} color = '#f4f4f4'>
