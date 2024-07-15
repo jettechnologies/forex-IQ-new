@@ -38,10 +38,10 @@ const AboutUs = () => {
               Who we are
             </Heading>
             <Text fontSize="lg">
-              Welcome to Forex IQ - Your Gateway to Algorithmic Trading in the Indian Markets!
+              Welcome to Forex IQ - Your Gateway to Algorithmic Trading in the International Markets!
             </Text>
             <Text fontSize="lg">
-              At Forex IQ, we empower traders, investors, and financial enthusiasts to navigate the complex world of the Indian financial markets with confidence and precision. Our cutting-edge algorithmic trading software is designed to revolutionize the way you engage with the stock markets, providing you with a powerful arsenal of tools to enhance your trading experience.
+              At Forex IQ, we empower traders, investors, and financial enthusiasts to navigate the complex world of the financial markets with confidence and precision. Our cutting-edge algorithmic trading software is designed to revolutionize the way you engage with the stock markets, providing you with a powerful arsenal of tools to enhance your trading experience.
             </Text>
             {/* <Link href="/about-us" px= {4} py={2} rounded={"md"} backgroundColor="#011b3d" color = "#fff" display="flex" alignItems="center" mt={6} shadow = {"md"}>
               Read more <Icon as={ArrowForwardIcon} ml={2} />
