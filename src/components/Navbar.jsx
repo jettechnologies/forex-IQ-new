@@ -140,9 +140,9 @@ const Navbar = () => {
             left="0"
           >
             <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
-            <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
+            <Link onClick = {toggleMobileMenu} href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
               {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-            <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
+            <Link onClick = {toggleMobileMenu} href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
             <Flex mt = {10} columnGap={"2rem"} rowGap={4} flexDirection={{base: "column", md: "row"}}>
             <Button
                 variant="outline"
@@ -153,6 +153,7 @@ const Navbar = () => {
                 bg="transparent"
                 animation={`${glow} 2s infinite`}
                 width= {{base: "100%", md: "calc(50% - 2rem)"}}
+                onClick = {toggleMobileMenu}
               >
                 <Text fontSize={"md"}>Login</Text>
               </Button>
@@ -161,6 +162,7 @@ const Navbar = () => {
                 color="white"
                 width={{base: "100%", md: "calc(50% - 2rem)"}}
                 _hover={{ bg: "#011b3d" }}
+                onClick = {toggleMobileMenu}
               >
                 <Text fontSize={"md"}>Sign Up</Text>
               </Button>

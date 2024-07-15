@@ -223,6 +223,7 @@ const JoinForexIQRevolution = () => {
             fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
             color="white"
             mb={16}
+            lineHeight = {'1.5rem'}
           >
             Don&apos;t let market volatility impact your trading. With Forex IQ, leverage algorithmic trading to make informed, data-driven decisions that enhance your performance and confidence. Upgrade your trading experience today and see the difference.
           </Text>
