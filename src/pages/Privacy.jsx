@@ -8,7 +8,7 @@ const Privacy = () => (
   <Box backgroundColor = '#0e1113' color = '#f4f4f4'>
     <Banner title="Privacy Policy" subtitle="Privacy policy page" banner = {banner} />
     <Box p={4}>
-      <Text fontSize="lg" lineHeight="1.5em">
+      <Text fontSize="lg" lineHeight={1.5} color = '#f4f4f4'>
         {/* <h2>Privacy Policy</h2> */}
         <p><b fontBold = 'bold'>Information Collection:</b></p>
         <p>Personal Information: When you create an account or use The Forex IQ, we may collect personal information such as your name, email address, contact information, and payment details.</p>

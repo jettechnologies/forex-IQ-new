@@ -7,7 +7,7 @@ const Terms = () => (
   <Box backgroundColor = '#0e1113' color = '#f4f4f4'>
     <Banner title="Terms and Conditions" subtitle="Terms and conditions" banner={banner}/>
     <Box p={4}>
-      <Text fontSize="lg" lineHeight="1.5em">
+      <Text fontSize="lg" lineHeight={1.5} color = '#f4f4f4'>
         <p><b fontBold = 'bold'>License and Usage:</b> The Forex IQ grants you a non-exclusive, non-transferable, limited license to use for personal or business purposes, in accordance with these Terms. You must be of legal age to use in the Forex markets. By using the software, you confirm that you meet the legal age requirement.</p>
         <p><b fontBold = 'bold'>Data and Content:</b> The Forex IQ provides access to financial data and content for informational purposes. While we endeavor to provide accurate and up-to-date information, we do not guarantee the accuracy, completeness, or reliability of the data and content. You acknowledge the inherent volatility of financial markets, and that past performance is not indicative of future results.</p>
         <p><b fontBold = 'bold'>Risk Disclosure:</b> Trading in the Forex markets involves financial risk. You must carefully consider your risk tolerance and financial situation before using the software. The Forex IQ does not provide financial advice. You are responsible for all trading decisions and their consequences. The software is a tool for execution; the user is solely responsible for strategy development and implementation.</p>

@@ -5,10 +5,10 @@ import banner from "../assets/charts_2.jpg";
 
 
 const Refund = () => (
-  <Box backgroundColor = '#0e1113' color = '#f4f4f4'>
+  <Box backgroundColor = '#0e1113' >
     <Banner title="Refund Policy" subtitle="Refund policy page" banner = {banner}/>
     <Box p={4}>
-      <Text fontSize="lg" lineHeight="1.5em">
+      <Text fontSize="lg" lineHeight={1.5} color = '#f4f4f4'>
         <p><b fontBold = 'bold'>Eligibility for Refunds:</b></p>
         <p>Initial Purchase Period: Refund requests must be made within 14 days of the initial purchase date.</p>
         <p>Technical Issues: If The Forex IQ auto trading bot experiences technical issues that cannot be resolved within 30 days of reporting the issue to our support team, a refund may be granted.</p>
