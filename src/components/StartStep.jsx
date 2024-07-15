@@ -135,7 +135,7 @@ const StartStep = () => {
               direction="column"
               p={6}
               borderRadius="md"
-              backgroundColor={activeStep === index ? '#191b20' : '#0e1113'}
+              backgroundColor={activeStep === index ? '#46484b' : '#191b20'}
               onMouseEnter={() => setActiveStep(index)}
               onMouseLeave={() => setActiveStep(null)}
               transition="background-color 0.3s"

@@ -1,7 +1,7 @@
 import { Box, Grid, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
-import aboutUsImage from '../assets/charts_2.jpg'; // Adjust the import path according to your project structure
+import aboutUsImage from '../assets/aboutUs_2.jpg'; // Adjust the import path according to your project structure
 
 const AboutUs = () => {
 //   const showImage = useBreakpointValue({ base: false, lg: true });

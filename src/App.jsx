@@ -10,7 +10,7 @@ import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
-    <Box border="2px solid black" overflowX="hidden" fontFamily="Roboto, sans-serif">
+    <Box overflowX="hidden" fontFamily="Rajdhani, sans-serif">
       <Routes>
         <Route path='/' element = {<Layout/>} >
           <Route index element = {<Home />} />
