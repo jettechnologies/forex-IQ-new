@@ -122,6 +122,7 @@ const Navbar = () => {
           </Flex>
           <IconButton
             aria-label="Toggle Menu"
+            backgroundColor = 'transparent'
             icon={isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             display={{ base: "flex", lg: "none" }}
             onClick={toggleMobileMenu}
