@@ -1,7 +1,9 @@
 import { Box, Grid, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
-import aboutUsImage from '../assets/aboutUs_2.jpg'; // Adjust the import path according to your project structure
+// import aboutUsImage from '../assets/aboutUs_2.jpg';
+import aboutUsImage from '../assets/5.png'; // Adjust the import path according to your project structure
+ // Adjust the import path according to your project structure
 
 const AboutUs = () => {
 //   const showImage = useBreakpointValue({ base: false, lg: true });
@@ -30,6 +32,15 @@ const AboutUs = () => {
                 height="100%"
                 objectFit="cover"
               />
+              {/* <Image
+                loading='lazy'
+                src={aboutUsImage}
+                alt="About Us"
+                borderRadius="md"
+                width="100%"
+                height="100%"
+                objectFit="cover"
+              /> */}
             </Box>
           </motion.div>
         <motion.div initial="hidden" whileInView="visible" variants={contentVariants} viewport={{ once: true }}>
