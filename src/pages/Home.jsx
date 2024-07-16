@@ -4,6 +4,7 @@ import Features from "../components/Features";
 import AboutUs from "../components/AboutUs";
 import StartStep from "../components/StartStep";
 import JoinForexIQRevolution from "../components/Revolution";
+import DetailedFeature from "../components/DetailedFeature";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <Features />
         <AboutUs />
         <StartStep />
+        <DetailedFeature />
         <JoinForexIQRevolution />
     </Box>
   )

@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 const Footer = () => {
   const textColor = useColorModeValue('gray.500', 'gray.400');
   return (
-    <Box as="footer" bg="#191b20"  py={6}>
+    <Box as="footer" bg="#0e1113"  py={6}>
       <Container maxW="7xl" px={4}>
         <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" alignItems="center">
           <Box mb={{ base: 6, md: 0 }} >
@@ -40,7 +40,7 @@ const Footer = () => {
                 Legal
               </Heading>
               <Stack spacing={4} color={textColor} fontWeight="medium">
-                <Link href="/privacy-policy" _hover={{ textDecoration: 'underline' }}>
+                <Link href="/privacy-policy" _hover={{ textDecoration: 'underline' }} _focus={{ outline: 'none' }} focus = {{outline: 'none'}}>
                   Privacy Policy
                 </Link>
                 <Link href="/refund-policy" _hover={{ textDecoration: 'underline' }}>

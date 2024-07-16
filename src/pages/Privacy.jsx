@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import banner from "../assets/charts.jpg";
 
 const Privacy = () => (
-  <Box backgroundColor='#46484b' color='#f4f4f4'>
+  <Box backgroundColor='#191b20' color='#f4f4f4'>
     <Banner title="Privacy Policy" banner={banner} />
     <Box p={4}>
       <Text fontSize="lg" lineHeight={1.5} color='#f4f4f4'>

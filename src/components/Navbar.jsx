@@ -51,8 +51,10 @@ const Navbar = () => {
         position: 'fixed',
         top: 0,
         left: '50%',
-        transform: 'translateX(-40%)',
-        width: '60%',
+        // transform: {lg:'translateX(-30%)', xl: "translateX(-40%)"},
+        transform: "translateX(-40%)",
+        // width: {lg: "70%", xl: "60%"},
+        width: "60%",
         zIndex: 100,
         transition: { duration: 0.3 },
       });
@@ -76,7 +78,7 @@ const Navbar = () => {
       <Box
         bg="#0e1113"
         color="white"
-        px={{base: "2rem", md: "4rem"}}
+        px={{ base: "2rem", md: "4rem" }}
         h="4rem"
         width="100%"
         position={{ base: 'fixed', lg: 'relative' }}
@@ -84,16 +86,15 @@ const Navbar = () => {
         zIndex={10}
       >
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
-          <Link href = "/" display={"flex"} alignItems={"center"}>
-            <Image src={Logo} alt="Logo" height="4rem" loading='lazy'/>
-            <Heading display={{base: "none", md: "inline-block"}} fontSize="2xl">TheforexIQ</Heading>
+          <Link href="/" display="flex" alignItems="center">
+            <Image src={Logo} alt="Logo" height="4rem" loading="lazy" />
+            <Heading display={{ base: "none", md: "inline-block" }} fontSize="2xl">TheforexIQ</Heading>
           </Link>
-          <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap={"2rem"} justifyContent="space-between" width="65vw">
-            <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} justifyContent={"space-around"} rounded = "lg" flex={1} px={2} py={2} border = "1px solid #c0c0c0">
-              <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
-              <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
-              {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-              <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
+          <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap="2rem" justifyContent="space-between" width="65vw">
+            <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #c0c0c0">
+              <Link href="/" px={2} py={2} mr={4} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
+              <Link href="/about-us" px={2} py={2} mr={4} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
+              <Link href="/contact-us" px={2} py={2} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
             </Box>
             <Box>
               <Button
@@ -107,7 +108,7 @@ const Navbar = () => {
                 width={buttonWidth}
                 my={2}
               >
-                <Text fontSize={"md"}>Login</Text>
+                <Text fontSize="md">Login</Text>
               </Button>
               <Button
                 bg="#011b3d"
@@ -116,15 +117,15 @@ const Navbar = () => {
                 my={2}
                 _hover={{ bg: "#011b3d" }}
               >
-                <Text fontSize={"md"}>Sign Up</Text>
+                <Text fontSize="md">Sign Up</Text>
               </Button>
             </Box>
           </Flex>
           <IconButton
             aria-label="Toggle Menu"
-            backgroundColor = '#0e1113'
+            backgroundColor="#0e1113"
             _focus={{ outline: "none", backgroundColor: 'transparent' }}
-            color = "#f4f4f4"
+            color="#f4f4f4"
             icon={isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             display={{ base: "flex", lg: "none" }}
             onClick={toggleMobileMenu}
@@ -142,12 +143,11 @@ const Navbar = () => {
             top="4rem"
             left="0"
           >
-            <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
-            <Link onClick = {toggleMobileMenu} href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
-              {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-            <Link onClick = {toggleMobileMenu} href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
-            <Flex mt = {10} columnGap={"2rem"} rowGap={4} flexDirection={{base: "column", md: "row"}}>
-            <Button
+            <Link href="/" px={2} py={2} mr={4} onClick={toggleMobileMenu} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
+            <Link href="/about-us" px={2} py={2} mr={4} onClick={toggleMobileMenu} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
+            <Link href="/contact-us" px={2} py={2} onClick={toggleMobileMenu} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+            <Flex mt={10} columnGap="2rem" rowGap={4} flexDirection={{ base: "column", md: "row" }}>
+              <Button
                 variant="outline"
                 border="1px solid"
                 borderColor="#46484b"
@@ -155,19 +155,19 @@ const Navbar = () => {
                 mr={4}
                 bg="transparent"
                 animation={`${glow} 2s infinite`}
-                width= {{base: "100%", md: "calc(50% - 2rem)"}}
-                onClick = {toggleMobileMenu}
+                width={{ base: "100%", md: "calc(50% - 2rem)" }}
+                onClick={toggleMobileMenu}
               >
-                <Text fontSize={"md"}>Login</Text>
+                <Text fontSize="md">Login</Text>
               </Button>
               <Button
                 bg="#011b3d"
                 color="white"
-                width={{base: "100%", md: "calc(50% - 2rem)"}}
+                width={{ base: "100%", md: "calc(50% - 2rem)" }}
                 _hover={{ bg: "#011b3d" }}
-                onClick = {toggleMobileMenu}
+                onClick={toggleMobileMenu}
               >
-                <Text fontSize={"md"}>Sign Up</Text>
+                <Text fontSize="md">Sign Up</Text>
               </Button>
             </Flex>
           </Box>
@@ -190,18 +190,17 @@ const Navbar = () => {
             top={0}
             rounded="lg"
             zIndex={100}
-            border = "1px solid #c0c0c0"
+            border="1px solid #c0c0c0"
           >
             <Flex h="100%" alignItems="center" justifyContent="space-between" gap={10} py={4}>
-              <Link href =  "/" display={"flex"} alignItems={"center"}>
+              <Link href="/" display="flex" alignItems="center">
                 <Image src={Logo} alt="Logo" height="4rem" />
               </Link>
               <Flex display={{ base: "none", lg: "block" }}>
-                <Box display={{ base: "none", lg: "flex" }} gap={"1.5rem"} flex={1} px={2} py={2}>
-                <Link href="/" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>Home</Text></Link>
-                <Link href="/about-us" px={2} py={2} mr={4}><Text variants = "small" fontSize={"md"}>About Us</Text></Link>
-                {/* <Link href="/#features" display="block" py={2}>Features</Link> */}
-                <Link href="/contact-us" px={2} py={2}><Text variants = "small" fontSize={"md"}>Contact Us</Text></Link>
+                <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" flex={1} px={2} py={2}>
+                  <Link href="/" px={2} py={2} mr={4} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
+                  <Link href="/about-us" px={2} py={2} mr={4} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
+                  <Link href="/contact-us" px={2} py={2} _focus={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
                 </Box>
               </Flex>
               <Button
@@ -211,7 +210,7 @@ const Navbar = () => {
                 my={2}
                 _hover={{ bg: "#011b3d" }}
               >
-                <Text fontSize={"md"}>Sign Up</Text>
+                <Text fontSize="md">Sign Up</Text>
               </Button>
             </Flex>
           </Box>

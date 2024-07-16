@@ -7,7 +7,7 @@ const JoinForexIQRevolution = () => {
       position="relative"
       minHeight="100vh"
       width="100%"
-      bg="#0e1113"
+      bg="#191b20"
       display="flex"
       alignItems="center"
       justifyContent="center"

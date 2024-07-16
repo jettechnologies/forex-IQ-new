@@ -59,7 +59,7 @@ import {
     };
   
     return (
-      <Box id="contact-us" bg="#46484b" py={{ base: 20, lg: 16 }} px={4} minHeight="100vh">
+      <Box id="contact-us" bg="#191b20" py={{ base: 20, lg: 16 }} px={4} minHeight="100vh">
         <Container maxW="screen.md" mx="auto">
           <Heading
             as="h2"
