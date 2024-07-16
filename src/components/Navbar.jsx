@@ -366,9 +366,11 @@ const Navbar = () => {
             top="4rem"
             left="0"
           >
-            <Link href="/" px={2} py={2} mr={4} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
-            <Link href="/about-us" px={2} py={2} mr={4} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
-            <Link href="/contact-us" px={2} py={2} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+            <Flex direction = "column">
+              <Link href="/" px={2} py={2} mr={4} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif">Home</Link>
+              <Link href="/about-us" px={2} py={2} mr={4} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif">About Us</Link>
+              <Link href="/contact-us" px={2} py={2} onClick={toggleMobileMenu} fontFamily="'Rajdhani', sans-serif">Contact Us</Link>
+            </Flex>
             <Flex mt={10} columnGap="2rem" rowGap={4} flexDirection={{ base: "column", md: "row" }}>
               <Button
                 variant="outline"
