@@ -104,9 +104,9 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaRegFileAlt, FaWallet, FaPlug, FaPowerOff } from 'react-icons/fa';
 import form from "../assets/form.png";
-import purchase from "../assets/purchase.png";
-import connect from "../assets/connect.png";
-import activate from "../assets/activation.png";
+import purchase from "../assets/payment.svg";
+import connect from "../assets/data_centre.png";
+import activate from "../assets/aitrading_5.png";
 
 const steps = [
   { text: 'Signup', description: 'Sign up to create your account', image: form, icon: <FaRegFileAlt /> },
@@ -175,7 +175,7 @@ const StartStep = () => {
           ))}
         </Grid>
         {isLargeScreen && (
-          <Box mt={10} width={{ base: '100%', md: '80%', lg: '60%' }} height={{ base: '200px', md: '300px', lg: '400px' }} position="relative">
+          <Box mt={10} width={{ base: '100%', md: '80%', lg: '70%' }} height={{ base: '200px', md: '300px', lg: '400px' }} position="relative">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
