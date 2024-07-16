@@ -154,7 +154,7 @@ const StartStep = () => {
               alignItems="center"
               textAlign="center"
             >
-              <Box mb={4} color={activeStep === index ? '#010392' : '#010494'} fontSize="2xl">
+              <Box mb={4} color={activeStep === index ? '#29ce56' : '#1b6e4e '} fontSize="2xl">
                 {step.icon}
               </Box>
               <Text

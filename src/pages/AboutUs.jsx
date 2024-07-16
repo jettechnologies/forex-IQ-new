@@ -64,7 +64,7 @@ const AboutUs = () => {
       />
       <Box px={{ base: 10, md: 20 }} py={10}>
         <motion.div initial="hidden" whileInView="visible" variants={contentVariants} viewport={{ once: true }}>
-          <Flex direction="column" align="flex-start">
+          {/* <Flex direction="column" align="flex-start">
             <Box flex="1" pr={{ base: 0, md: 8 }}>
               <Heading as="h2" size="xl" mb={4} textTransform="capitalize">
                 Who we are
@@ -92,16 +92,53 @@ const AboutUs = () => {
                 Our vision at Forex IQ is to democratize algorithmic trading, making it accessible to both seasoned professionals and aspiring traders in the Indian markets. We believe that technology should level the playing field, and with our platform, we aim to do just that.
               </Text>
             </Box>
+          </Flex> */}
+          <Flex direction="row" justify={"space-between"} mb = {"3rem"}>
+            <Box flex="1" pr={{ base: 0, md: 8 }}>
+              <Heading as="h2" size="xl" mb={4} textTransform="capitalize">
+                Who we are
+              </Heading>
+              <Text fontSize="lg">
+                Welcome to Forex IQ - Your Gateway to Algorithmic Trading in the International Markets!
+              </Text>
+              <Text fontSize="lg" mt={4}>
+                At Forex IQ, we empower traders, investors, and financial enthusiasts to navigate the complex world of the International financial markets with confidence and precision. Our cutting-edge algorithmic trading software is designed to revolutionize the way you engage with the stock markets, providing you with a powerful arsenal of tools to enhance your trading experience.
+              </Text>
+              <Heading as="h3" size="lg" mt={10}>
+                Our Vision
+              </Heading>
+              <Text fontSize="lg">
+                Our vision at Forex IQ is to democratize algorithmic trading, making it accessible to both seasoned professionals and aspiring traders in the Indian markets. We believe that technology should level the playing field, and with our platform, we aim to do just that.
+              </Text>
+            </Box>
+
+              <Image 
+                src={sideImg} 
+                alt="side Image placeholder" 
+                float={{ base: 'none', lg: 'right' }} 
+                ml={{ base: 0, md: 4 }} 
+                my = {6}
+                width={{ base: '300px', md: '500px' }} 
+                height={{ base: '200px', md: '400px' }}
+                display={{ base: 'none', lg: 'block' }}
+              />
+              {/* <Heading as="h3" size="lg" mt={10}>
+                Our Vision
+              </Heading>
+              <Text fontSize="lg">
+                Our vision at Forex IQ is to democratize algorithmic trading, making it accessible to both seasoned professionals and aspiring traders in the Indian markets. We believe that technology should level the playing field, and with our platform, we aim to do just that.
+              </Text> */}
           </Flex>
         </motion.div>
         <Image 
           src={sideImg}
           alt="side image placeholder" 
-          width="300px" 
-          height="200px"
+          width={{ base: '300px', md: '500px' }} 
+          height={{ base: '200px', md: '300px' }}
           mx="auto"
           my={8}
-          display={{ base: 'block', md: 'none' }}
+          display={{ base: 'block', lg: 'none' }}
+          objectFit = "contain"
         />
         <motion.div initial="hidden" whileInView="visible" variants={imageVariants} viewport={{ once: true }}>
           <Box>

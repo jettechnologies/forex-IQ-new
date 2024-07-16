@@ -3,14 +3,14 @@ import { Box, Flex, Button, IconButton, useBreakpointValue, keyframes, Image, Te
 import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { motion, useAnimation } from 'framer-motion';
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo_2.png";
 
 const Navbar = () => {
   // Keyframes for glowing border effect
   const glow = keyframes`
-    0% { box-shadow: 0 0 5px #007377; }
-    50% { box-shadow: 0 0 10px blue; }
-    100% { box-shadow: 0 0 5px #001b3d; }
+    0% { box-shadow: 0 0 5px #29ce56; }
+    50% { box-shadow: 0 0 10px green; }
+    100% { box-shadow: 0 0 5px #1b6e4e; }
   `;
 
   // Responsive width for buttons
@@ -87,10 +87,10 @@ const Navbar = () => {
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
           <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
             <Image src={Logo} alt="Logo" height="4rem" loading="lazy" />
-            <Heading display={{ base: "none", md: "inline-block" }} fontSize="2xl">TheforexIQ</Heading>
+            <Heading display={{ base: "none", md: "inline-block" }} fontSize="2xl">TheForexIQ</Heading>
           </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap="2rem" justifyContent="space-between" width="65vw">
-            <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #c0c0c0">
+            <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #4f5150">
               <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
               <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
               <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
@@ -99,8 +99,8 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 border="1px solid"
-                borderColor="#46484b"
-                colorScheme="#007377"
+                borderColor="#4f5150"
+                colorScheme="#1b6e4e"
                 mr={4}
                 bg="transparent"
                 animation={`${glow} 2s infinite`}
@@ -110,11 +110,11 @@ const Navbar = () => {
                 <Text fontSize="md">Login</Text>
               </Button>
               <Button
-                bg="#011b3d"
+                bg="#1b6e4e"
                 color="white"
                 width={buttonWidth}
                 my={2}
-                _hover={{ bg: "#011b3d" }}
+                _hover={{ bg: "#1b6e4e" }}
               >
                 <Text fontSize="md">Sign Up</Text>
               </Button>
@@ -151,8 +151,8 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 border="1px solid"
-                borderColor="#46484b"
-                colorScheme="#007377"
+                borderColor="#4f5150"
+                colorScheme="#1b6e4e"
                 mr={4}
                 bg="transparent"
                 animation={`${glow} 2s infinite`}
@@ -162,10 +162,10 @@ const Navbar = () => {
                 <Text fontSize="md">Login</Text>
               </Button>
               <Button
-                bg="#011b3d"
+                bg="#1b6e4e"
                 color="white"
                 width={{ base: "100%", md: "calc(50% - 2rem)" }}
-                _hover={{ bg: "#011b3d" }}
+                _hover={{ bg: "#1b6e4e" }}
                 onClick={toggleMobileMenu}
               >
                 <Text fontSize="md">Sign Up</Text>
@@ -191,7 +191,7 @@ const Navbar = () => {
             top={0}
             rounded="lg"
             zIndex={100}
-            border="1px solid #c0c0c0"
+            border="1px solid #4f5150"
           >
             <Flex h="100%" alignItems="center" justifyContent="space-between" gap={10} py={4}>
               <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
@@ -205,7 +205,7 @@ const Navbar = () => {
                 </Box>
               </Flex>
               <Button
-                bg="#011b3d"
+                bg="#1b6e4e"
                 color="white"
                 width={buttonWidth}
                 my={2}

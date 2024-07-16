@@ -9,6 +9,11 @@ const HeroSection = () => {
 
   const isMobile = useBreakpointValue({base: true, md: false});
 
+  // Function to shuffle an array
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
   const typing = keyframes`
     from { width: 50% }
     to { width: 100% }
@@ -33,6 +38,8 @@ const HeroSection = () => {
     "LINK/USD $30.12 (+0.99%)"
   ];
 
+  const shuffledItems = shuffleArray(tickerItems);
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -55,6 +62,19 @@ const HeroSection = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
+  };
+
+  // Custom slider settings with variations
+  const sliderSettingsFast = {
+    ...sliderSettings,
+    speed: 1500,
+    autoplaySpeed: 1500,
+  };
+
+  const sliderSettingsSlow = {
+    ...sliderSettings,
+    speed: 2500,
+    autoplaySpeed: 2500,
   };
 
   return (
@@ -104,7 +124,7 @@ const HeroSection = () => {
             </Text>
             <Button
               px={{ md: "4rem" }}
-              bg="#011b3d"
+              bg="#1b6e4e"
               color="white"
               _hover={{ bg: "#00284d" }}
               size="lg"
@@ -139,7 +159,7 @@ const HeroSection = () => {
           <Box maxWidth="90vw">
             <Slider {...sliderSettingsTwo}>
               {tickerItems.map((item, index) => (
-                <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
+                <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "#29ce56 " : "red.400"}>
                   <Text fontSize="md">{item}</Text>
                 </Box>
               ))}
@@ -160,9 +180,9 @@ const HeroSection = () => {
             zIndex={2}
           >
             <Box width = "30%">
-              <Slider {...sliderSettings}>
-                {tickerItems.map((item, index) => (
-                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
+              <Slider {...sliderSettingsFast}>
+                {shuffledItems.map((item, index) => (
+                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "#29ce56  " : "red.400"}>
                     <Text fontSize="md">{item}</Text>
                   </Box>
                 ))}
@@ -170,17 +190,17 @@ const HeroSection = () => {
             </Box>
             <Box width = "30%">
               <Slider {...sliderSettings}>
-                {tickerItems.map((item, index) => (
-                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
+                {shuffledItems.map((item, index) => (
+                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "#29ce56 " : "red.400"}>
                     <Text fontSize="md">{item}</Text>
                   </Box>
                 ))}
               </Slider>
             </Box>
             <Box width = "30%">
-              <Slider {...sliderSettings}>
-                {tickerItems.map((item, index) => (
-                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "green.400" : "red.400"}>
+              <Slider {...sliderSettingsSlow}>
+                {shuffledItems.map((item, index) => (
+                  <Box key={index} px={4} display="inline-block" color={item.includes("+") ? "#29ce56 " : "red.400"}>
                     <Text fontSize="md">{item}</Text>
                   </Box>
                 ))}

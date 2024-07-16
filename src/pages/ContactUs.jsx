@@ -82,8 +82,9 @@ import {
             Business plan? Let us know.
           </Text>
           <Flex direction="column" gap={8}>
-            <Flex justifyContent="space-between" direction={{ base: 'column', lg: 'row' }} gap={4}>
+            <Flex width = {{lg: "60%"}} alignSelf = "center" 	justifyContent="space-around" direction={{ base: 'column', md: 'row' }} gap={4}>
               <Box
+                width = "fit-content"
                 bg="#0e1113"
                 px={8}
                 py={6}
@@ -97,6 +98,7 @@ import {
                 <Text ml={2}>1234 Street Name, City, Country</Text>
               </Box>
               <Box
+                width = "fit-content"
                 bg="#0e1113"
                 px={8}
                 py={6}
@@ -110,6 +112,7 @@ import {
                 <Text ml={2}>+123 456 7890</Text>
               </Box>
               <Box
+                width = "fit-content"
                 bg="#0e1113"
                 px={8}
                 py={6}
@@ -219,14 +222,15 @@ import {
                       height="50px"
                       py={5}
                       px={5}
+                      mt = {8}
                       fontSize="md"
                       fontWeight="medium"
                       textAlign="center"
                       color="white"
                       rounded="lg"
-                      bg="black"
-                      _hover={{ bg: 'dark.800' }}
-                      _focus={{ ring: 4, outline: 'none', ringColor: 'primary.300' }}
+                      bg="#1b6e4e"
+                      _hover={{ bg: '#29ce56' }}
+                      _focus={{ ring: 4, outline: 'none', ringColor: '#4f5150' }}
                     >
                       {loading ? 'Loading..' : 'Send message'}
                     </Button>

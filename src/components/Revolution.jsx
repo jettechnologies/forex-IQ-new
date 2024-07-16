@@ -61,7 +61,7 @@ const JoinForexIQRevolution = () => {
           </Text>
           <Button
             px={{ base: '2rem', md: '4rem' }}
-            bg="#011b3d"
+            bg="#1b6e4e"
             color="white"
             _hover={{ bg: '#00284d' }}
             size="lg"

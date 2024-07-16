@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Heading, HStack, Image, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { FaFacebookF, FaDiscord, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo_2.png';
 
 const Footer = () => {
   const textColor = useColorModeValue('gray.500', 'gray.400');
