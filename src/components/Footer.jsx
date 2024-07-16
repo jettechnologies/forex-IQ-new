@@ -24,13 +24,13 @@ const Footer = () => {
                 Main nav
               </Heading>
               <Stack spacing={4} color={textColor} fontWeight="medium">
-                <Link href="/" _hover={{ textDecoration: 'underline' }}>
+                <Link className='noSelect' href="/" _hover={{ textDecoration: 'underline' }}>
                   Home
                 </Link>
-                <Link href="/about-us" _hover={{ textDecoration: 'underline' }}>
+                <Link className='noSelect' href="/about-us" _hover={{ textDecoration: 'underline' }}>
                   About Us
                 </Link>
-                <Link href="/contact-us" _hover={{ textDecoration: 'underline' }}>
+                <Link className='noSelect' href="/contact-us" _hover={{ textDecoration: 'underline' }}>
                   Contact Us
                 </Link>
               </Stack>
@@ -40,13 +40,13 @@ const Footer = () => {
                 Legal
               </Heading>
               <Stack spacing={4} color={textColor} fontWeight="medium">
-                <Link href="/privacy-policy" _hover={{ textDecoration: 'underline' }} _focus={{ outline: 'none' }} focus = {{outline: 'none'}}>
+                <Link className='noSelect' href="/privacy-policy" _hover={{ textDecoration: 'underline' }} _focus={{ outline: 'none' }} focus = {{outline: 'none'}}>
                   Privacy Policy
                 </Link>
-                <Link href="/refund-policy" _hover={{ textDecoration: 'underline' }}>
+                <Link className='noSelect' href="/refund-policy" _hover={{ textDecoration: 'underline' }}>
                   Refund Policy
                 </Link>
-                <Link href="/terms-and-condition" _hover={{ textDecoration: 'underline' }}>
+                <Link className='noSelect' href="/terms-and-condition" _hover={{ textDecoration: 'underline' }}>
                   Terms & Conditions
                 </Link>
               </Stack>

@@ -85,15 +85,15 @@ const Navbar = () => {
         zIndex={10}
       >
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
+          <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
             <Image src={Logo} alt="Logo" height="4rem" loading="lazy" />
             <Heading display={{ base: "none", md: "inline-block" }} fontSize="2xl">TheforexIQ</Heading>
           </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap="2rem" justifyContent="space-between" width="65vw">
             <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #c0c0c0">
-              <Link to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
-              <Link to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
-              <Link to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+              <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
+              <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
+              <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
             </Box>
             <Box>
               <Button
@@ -143,9 +143,9 @@ const Navbar = () => {
             left="0"
           >
             <Flex direction="column" rowGap={4}>
-              <Link to="/" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
-              <Link to="/about-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
-              <Link to="/contact-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Contact Us</Link>
+              <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
+              <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
+              <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Contact Us</Link>
             </Flex>
             <Flex mt={10} columnGap="2rem" rowGap={4} flexDirection={{ base: "column", md: "row" }}>
               <Button
@@ -194,14 +194,14 @@ const Navbar = () => {
             border="1px solid #c0c0c0"
           >
             <Flex h="100%" alignItems="center" justifyContent="space-between" gap={10} py={4}>
-              <Link to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
+              <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
                 <Image src={Logo} alt="Logo" height="4rem" />
               </Link>
               <Flex display={{ base: "none", lg: "block" }}>
                 <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" flex={1} px={2} py={2}>
-                  <Link to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
-                  <Link to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
-                  <Link to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+                  <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
+                  <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
+                  <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
                 </Box>
               </Flex>
               <Button
