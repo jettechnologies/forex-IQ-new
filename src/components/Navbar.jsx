@@ -114,7 +114,7 @@ const Navbar = () => {
                 color="white"
                 width={buttonWidth}
                 my={2}
-                _hover={{ bg: "#1b6e4e" }}
+                _hover={{ bg: "#29ce56 " }}
               >
                 <Text fontSize="md">Sign Up</Text>
               </Button>
@@ -165,7 +165,7 @@ const Navbar = () => {
                 bg="#1b6e4e"
                 color="white"
                 width={{ base: "100%", md: "calc(50% - 2rem)" }}
-                _hover={{ bg: "#1b6e4e" }}
+                _hover={{ bg: "#29ce56"}}
                 onClick={toggleMobileMenu}
               >
                 <Text fontSize="md">Sign Up</Text>
@@ -209,7 +209,7 @@ const Navbar = () => {
                 color="white"
                 width={buttonWidth}
                 my={2}
-                _hover={{ bg: "#011b3d" }}
+                _hover={{ bg: "#29ce56" }}
               >
                 <Text fontSize="md">Sign Up</Text>
               </Button>

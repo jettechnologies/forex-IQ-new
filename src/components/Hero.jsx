@@ -126,7 +126,7 @@ const HeroSection = () => {
               px={{ md: "4rem" }}
               bg="#1b6e4e"
               color="white"
-              _hover={{ bg: "#00284d" }}
+              _hover={{ bg: "#29ce56" }}
               size="lg"
               width={{ base: "100%", md: "auto" }}
               rounded="md"
