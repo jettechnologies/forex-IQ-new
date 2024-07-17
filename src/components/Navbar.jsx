@@ -96,6 +96,7 @@ const Navbar = () => {
                 top="1.25rem"
                 right = "-3rem">TheForexIQ</Heading> */}
                 <Heading 
+                  color = "#29ce56"
                   display= {{base:"inline-block", md: "none"}} 
                   fontSize={{sm: "lg", md:"2xl"}} 
                   position = "absolute" 
