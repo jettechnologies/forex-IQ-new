@@ -88,14 +88,14 @@ const Navbar = () => {
         <Flex h="100%" alignItems="center" justifyContent="space-between" py={4}>
           <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
             <Box height={"4rem"} position = "relative">
-              <Image src={Logo} alt="Logo" h="100%" w="100%" objectFit="contain" loading="lazy"/>
+              <Image src={Logo} alt="Logo" h="100%" w="100%" objectFit="contain" loading="lazy" />
                 <Heading 
                   color = "#29ce56"
                   display= "block" 
-                  fontSize= "lg" 
+                  fontSize= {{base:"xs", md: "sm"}} 
                   position = "absolute" 
                   bottom="0"
-                  left = "0"
+                  left = {{base:"0.85rem", md: "0.65rem"}}
                 >
                   TheForexIQ
                 </Heading>

@@ -22,10 +22,10 @@ const Footer = () => {
                     <Heading 
                       color = "#29ce56"
                       display= "block" 
-                      fontSize= "lg" 
+                      fontSize= {{base:"xs", md: "sm"}} 
                       position = "absolute" 
                       bottom="0"
-                      left = "0"
+                      left = {{base:"0.85rem", md: "0.65rem"}}
                     >
                       TheForexIQ
                     </Heading>
