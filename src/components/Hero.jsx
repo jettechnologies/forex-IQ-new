@@ -145,7 +145,7 @@ const HeroSection = () => {
         </Flex>
         {isMobile ? 
           <Box 
-          px={4} 
+          px={{ base: 4, md: 16 }}
           py={2} 
           bg="#0e1113" 
           opacity={0.7}
@@ -168,7 +168,7 @@ const HeroSection = () => {
         </Box>
           :
           <Flex 
-            px={4} 
+            px={{ base: 4, md: 16 }}
             py={2} 
             bg="#0e1113" 
             opacity={0.7}
