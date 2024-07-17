@@ -75,7 +75,8 @@ const Navbar = () => {
     <>
       {/* Initial Navbar */}
       <Box
-        bg="#0e1113"
+        // bg="#0e1113"
+        bg = "#000401"
         color="white"
         px={{ base: "2rem", md: "4rem" }}
         h="4rem"
@@ -183,7 +184,8 @@ const Navbar = () => {
           style={{ display: isFixed ? 'block' : 'none', opacity: 0 }}
         >
           <Box
-            bg="#0e1113"
+            // bg="#0e1113"
+            bg = "#000401"
             color="white"
             px="2rem"
             h="4rem"
