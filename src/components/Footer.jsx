@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Heading, HStack, Image, Link, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { FaFacebookF, FaDiscord, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
-import logo from '../assets/logo_2.png';
+import Logo from '../assets/logo_2.png';
 
 const Footer = () => {
   const textColor = useColorModeValue('gray.500', 'gray.400');
@@ -13,10 +13,23 @@ const Footer = () => {
           <Box mb={{ base: 6, md: 0 }} >
             <Link href = "/">
               <HStack spacing={3} alignItems="center">
-                <Image src={logo} h="4rem" alt="ForexIQ Logo"/>
+                {/* <Image src={logo} h="4rem" alt="ForexIQ Logo"/>
                 <Heading size="lg" fontWeight="bold" color="white">
                   TheForexIQ
-                </Heading>
+                </Heading> */}
+                <Box height={"4rem"} position = "relative">
+                  <Image src={Logo} alt="Logo" h="100%" w="100%" objectFit="contain" loading="lazy"/>
+                    <Heading 
+                      color = "#29ce56"
+                      display= "block" 
+                      fontSize= "lg" 
+                      position = "absolute" 
+                      bottom="0"
+                      left = "0"
+                    >
+                      TheForexIQ
+                    </Heading>
+                </Box>
               </HStack>
             </Link>
           </Box>

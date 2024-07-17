@@ -89,24 +89,18 @@ const Navbar = () => {
           <Link className='noSelect' to="/" style={{ display: 'flex', alignItems: 'center' }} _focus={{ outline: "none" }} _active={{ outline: "none" }}>
             <Box height={"4rem"} position = "relative">
               <Image src={Logo} alt="Logo" h="100%" w="100%" objectFit="contain" loading="lazy"/>
-              {/* <Heading 
-                display= {{base:"inline-block", md: "none"}} 
-                fontSize={{sm: "lg", md:"2xl"}} 
-                position = "absolute" 
-                top="1.25rem"
-                right = "-3rem">TheForexIQ</Heading> */}
                 <Heading 
                   color = "#29ce56"
-                  display= {{base:"inline-block", md: "none"}} 
-                  fontSize={{sm: "lg", md:"2xl"}} 
+                  display= "block" 
+                  fontSize= "lg" 
                   position = "absolute" 
                   bottom="0"
-                  left = "5%"
+                  left = "0"
                 >
                   TheForexIQ
                 </Heading>
             </Box>
-            <Heading display= {{base:"none", md: "inline-block"}} fontSize={{sm: "lg", md:"2xl"}}>TheForexIQ</Heading>
+            {/* <Heading display= {{base:"none", md: "inline-block"}} fontSize={{sm: "lg", md:"2xl"}}>TheForexIQ</Heading> */}
           </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap="2rem" justifyContent="space-between" width="65vw">
             <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #4f5150">
