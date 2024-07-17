@@ -36,7 +36,7 @@ const Footer = () => {
           <Flex width={{ base: '100%', md: '40%' }} justify="space-between" flexWrap="wrap" gap={8}>
             <Box>
               <Heading size="sm" mb={6} textTransform="uppercase" color="white">
-                Main nav
+                useful links
               </Heading>
               <Stack spacing={4} color={textColor} fontWeight="medium">
                 <Link className='noSelect' href="/" _hover={{ textDecoration: 'underline' }}>
