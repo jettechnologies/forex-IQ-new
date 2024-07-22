@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Box, Flex, Button, IconButton, useBreakpointValue, keyframes, Image, Text, Heading } from '@chakra-ui/react';
-import { Link } from "react-router-dom";
+import { Box, Flex, Button, IconButton, useBreakpointValue, keyframes, Image, Text, Heading, Link } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { motion, useAnimation } from 'framer-motion';
 import Logo from "../assets/logo_2.png";
@@ -103,10 +103,46 @@ const Navbar = () => {
             {/* <Heading display= {{base:"none", md: "inline-block"}} fontSize={{sm: "lg", md:"2xl"}}>TheForexIQ</Heading> */}
           </Link>
           <Flex display={{ base: "none", lg: "flex" }} alignItems="center" gap="2rem" justifyContent="space-between" width="65vw">
-            <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} py={2} border="1px solid #4f5150">
-              <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
-              <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
-              <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+          <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" justifyContent="space-around" rounded="lg" flex={1} px={2} border="1px solid #4f5150">
+            <Link
+              as={RouterLink}
+              to="/"
+              px="0.5rem"
+              py="1rem"
+              _hover={{ color: "#29ce56" }}
+              _focus={{ outline: "none" }}
+              _active={{ outline: "none" }}
+              fontFamily="'Rajdhani', sans-serif"
+              className="noSelect"
+            >
+              Home
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/about-us"
+              px="0.5rem"
+              py="1rem"
+              _hover={{ color: "#29ce56" }}
+              _focus={{ outline: "none" }}
+              _active={{ outline: "none" }}
+              fontFamily="'Rajdhani', sans-serif"
+              className="noSelect"
+            >
+              About Us
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/contact-us"
+              px="0.5rem"
+              py="1rem"
+              _hover={{ color: "#29ce56" }}
+              _focus={{ outline: "none" }}
+              _active={{ outline: "none" }}
+              fontFamily="'Rajdhani', sans-serif"
+              className="noSelect"
+            >
+              Contact Us
+            </Link>
             </Box>
             <Box>
               <Button
@@ -156,9 +192,9 @@ const Navbar = () => {
             left="0"
           >
             <Flex direction="column" rowGap={4}>
-              <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
-              <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
-              <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Contact Us</Link>
+              <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _hover={{ color: "#29ce56 " }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Home</Link>
+              <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _hover={{ color: "#29ce56 " }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">About Us</Link>
+              <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} onClick={toggleMobileMenu} _hover={{ color: "#29ce56 " }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif">Contact Us</Link>
             </Flex>
             <Flex mt={10} columnGap="2rem" rowGap={4} flexDirection={{ base: "column", md: "row" }}>
               <Button
@@ -213,9 +249,48 @@ const Navbar = () => {
               </Link>
               <Flex display={{ base: "none", lg: "block" }}>
                 <Box display={{ base: "none", lg: "flex" }} gap="1.5rem" flex={1} px={2} py={2}>
-                  <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
-                  <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
-                  <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link>
+                  {/* <Link className='noSelect' to="/" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _hover={{ color: "#29ce56 " }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Home</Text></Link>
+                  <Link className='noSelect' to="/about-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _hover={{ color: "#29ce56 " }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">About Us</Text></Link>
+                  <Link className='noSelect' to="/contact-us" style={{ padding: '0.5rem 1rem' }} _focus={{ outline: "none" }} _hover={{ color: "#29ce56 " }} _active={{ outline: "none" }} fontFamily="'Rajdhani', sans-serif"><Text fontSize="md">Contact Us</Text></Link> */}
+                  <Link
+                    as={RouterLink}
+                    to="/"
+                    px="0.5rem"
+                    py="1rem"
+                    _hover={{ color: "#29ce56" }}
+                    _focus={{ outline: "none" }}
+                    _active={{ outline: "none" }}
+                    fontFamily="'Rajdhani', sans-serif"
+                    className="noSelect"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    as={RouterLink}
+                    to="/about-us"
+                    px="0.5rem"
+                    py="1rem"
+                    _hover={{ color: "#29ce56" }}
+                    _focus={{ outline: "none" }}
+                    _active={{ outline: "none" }}
+                    fontFamily="'Rajdhani', sans-serif"
+                    className="noSelect"
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    as={RouterLink}
+                    to="/contact-us"
+                    px="0.5rem"
+                    py="1rem"
+                    _hover={{ color: "#29ce56" }}
+                    _focus={{ outline: "none" }}
+                    _active={{ outline: "none" }}
+                    fontFamily="'Rajdhani', sans-serif"
+                    className="noSelect"
+                  >
+                    Contact Us
+                  </Link>
                 </Box>
               </Flex>
               <Button
