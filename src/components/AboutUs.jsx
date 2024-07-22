@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
 // import aboutUsImage from '../assets/aboutUs_2.jpg';
 import aboutUsImage from '../assets/5.png'; // Adjust the import path according to your project structure
+// import aboutUsImage from '../assets/trading_icon.png'; // Adjust the import path according to your project structure
  // Adjust the import path according to your project structure
 
 const AboutUs = () => {
@@ -30,7 +31,7 @@ const AboutUs = () => {
                 borderRadius="md"
                 width="100%"
                 height="100%"
-                objectFit="cover"
+                objectFit="contain"
               />
               {/* <Image
                 loading='lazy'

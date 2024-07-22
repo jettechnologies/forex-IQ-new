@@ -1,27 +1,37 @@
-import { Box, Flex, Text, Image } from '@chakra-ui/react';
-import enrollmentIcon from '../assets/icons/enrollment.png';
-import paymentIcon from '../assets/icons/payment.png';
-import mentorIcon from '../assets/icons/mentor.png';
-import builderIcon from '../assets/icons/builder.png';
-import reportIcon from '../assets/icons/report.png';
-import certificateIcon from '../assets/icons/certificate.png';
+import { Box, Flex, Text, Image, useBreakpointValue } from '@chakra-ui/react';
+import automationIcon from '../assets/automation.png';
+import algorithmIcon from '../assets/algorithm.png';
+import riskIcon from '../assets/risk.png';
+import realtimeIcon from '../assets/real_time.png';
+import backtestingIcon from '../assets/backtesting.png';
+import customizationIcon from '../assets/customization.png';
 
 const featuresData = [
-  { image: enrollmentIcon, text: 'Automation' },
-  { image: paymentIcon, text: 'Algorithm' },
-  { image: mentorIcon, text: 'Risk management' },
-  { image: builderIcon, text: 'Real-time' },
-  { image: reportIcon, text: 'Backtesting' },
-  { image: certificateIcon, text: 'Customization' }
+  { image: automationIcon, text: 'Automation' },
+  { image: algorithmIcon, text: 'Algorithm' },
+  { image: riskIcon, text: 'Risk management' },
+  { image: realtimeIcon, text: 'Real-time' },
+  { image: backtestingIcon, text: 'Backtesting' },
+  { image: customizationIcon, text: 'Customization' }
 ];
 
 const Features = () => {
+
+  const isTablet = useBreakpointValue({
+    base: true,
+    sm: true,
+    md: false,
+    lg: false,
+    xl: true,
+  });
+
   return (
     <Box bg="#0e1113" py={4} px={{ base: 4, md: 8 }}>
       <Flex wrap="wrap" justify="center" gap={4}>
         {featuresData.map((feature, index) => (
           <Flex
             key={index}
+            position={"relative"}
             flexDirection={"column"}
             align={"center"}
             p={4}
@@ -30,12 +40,12 @@ const Features = () => {
             flexBasis={{ base: 'calc(50% - 1rem)', xl: 'calc(16.66% - 1rem)' }}
             maxWidth={{ base: 'calc(50% - 1rem)', xl: 'calc(16.66% - 1rem)' }}
           >
-            <Box mb={2}>
+            <Box>
               <Image src={feature.image} alt={`Feature ${index + 1}`} loading="lazy" />
             </Box>
-            <Text as="h4" fontSize="lg" color="#fff">
+            {isTablet && <Text as="h4" fontSize="lg" color="#fff" position={"absolute"} bottom={{sm: 5, base: "1.45rem", md: "12", xl: "1.75rem", "2xl": "1.9rem"}}>
               {feature.text}
-            </Text>
+            </Text>}
           </Flex>
         ))}
       </Flex>
