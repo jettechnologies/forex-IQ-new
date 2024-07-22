@@ -37,8 +37,8 @@ const Features = () => {
             p={4}
             borderRadius="md"
             textAlign="center"
-            flexBasis={{ base: 'calc(50% - 1rem)', xl: 'calc(16.66% - 1rem)' }}
-            maxWidth={{ base: 'calc(50% - 1rem)', xl: 'calc(16.66% - 1rem)' }}
+            flexBasis={{ base: 'calc(50% - 1rem)', xl: 'calc(15.66% - 1rem)' }}
+            maxWidth={{ base: 'calc(50% - 1rem)', xl: 'calc(15.66% - 1rem)' }}
           >
             <Box>
               <Image src={feature.image} alt={`Feature ${index + 1}`} loading="lazy" />
