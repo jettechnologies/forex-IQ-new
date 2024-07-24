@@ -118,7 +118,7 @@ const Footer = () => {
           <Box mb={{ base: 6, md: 0 }}>
             <Link href="/">
               <HStack spacing={3} alignItems="center">
-                <Box height="4rem" position="relative">
+                <Box width = {"6rem"} height="4rem" position="relative">
                   <Image src={Logo} alt="Logo" h="100%" w="100%" objectFit="contain" loading="lazy" />
                   <Heading
                     color="#29ce56"
