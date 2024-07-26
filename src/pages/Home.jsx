@@ -5,6 +5,7 @@ import AboutUs from "../components/AboutUs";
 import StartStep from "../components/StartStep";
 import JoinForexIQRevolution from "../components/Revolution";
 import DetailedFeature from "../components/DetailedFeature";
+import ForexChart from "../components/ForexChart";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Features />
         <AboutUs />
         <StartStep />
+        <ForexChart />
         <DetailedFeature />
         <JoinForexIQRevolution />
     </Box>

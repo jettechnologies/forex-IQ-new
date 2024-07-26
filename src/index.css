@@ -16,3 +16,32 @@
 .noSelect:focus {
     outline: none !important;
 }
+
+/* css style for the forexcharts styling */
+.chart-container {
+    background-color: #1c1c1c;
+    color: #ccc;
+    border:1px solid gray;
+  }
+  
+  h1 {
+    color: #1b6e4e;
+    text-align: center;
+  }
+  
+  .recharts-wrapper {
+    margin: auto;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    fill: #ccc;
+  }
+  
+  .recharts-tooltip-wrapper {
+    background-color: #fff;
+    color: black;
+  }
+  
+  .recharts-legend-wrapper {
+    color: #ccc;
+  }
